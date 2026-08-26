@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+
+    font-size: 100%; /* 16px */
+
+    /* Colors  */
+    --rose-800: hsl(332, 51%, 32%);
+
+    --rose-50: hsl(330, 100%, 98%);
+    --brown-800: hsl(14, 45%, 36%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+
+
+
+    /* Typography */
+    --font-title:'Young Serif', serif;
+    --font-content:'Outfit', sans-serif;
+    /* text preset I  - young serif regular  */
+    font-size:2.5rem; /* 40px */
+    font-weight: 400;
+    line-height: 100; /* 100 */
+    letter-spacing: 0;/* 0 */
+
+    /* text preset II  - young serif regular  */
+    font-size:1.75rem ;/* 28px */
+    font-weight:400 ;
+    line-height: 100;/* 100 */
+    letter-spacing: 0;/* 0 */
+
+    /* text preset III - outfit semibold */
+    font-size: 1.25rem;/* 20px */
+    font-weight: 600;
+    line-height: 100;/* 100 */
+    letter-spacing: 0;/* 0 */
+
+
+    /* text preset IV  outfit regular */
+    font-size: 1rem;/* 16px */
+    font-weight: 400;
+    line-height: 150;/* 150 */
+    letter-spacing: 0;/* 0 */
+
+
+    /* text preset - bold IV - outfit bold */
+    font-size: 1rem;/* 16px */
+    font-weight: 700;
+    line-height: 150;/* 150 */
+    letter-spacing: 0;/* 0 */
+
+
+    /* Spacing - based on 16px*/
+    /* replace 8px system with 16px base */
+    --spacing-800:8rem;/* 128px / 1600 */
+    --spacing-300:3rem;/* 48px  / 600*/
+    --spacing-250:2.5rem;/* 40px / 500  */
+    --spacing-200:2rem;/* 32px  / 400*/
+    --spacing-150:1.5rem;/* 24px  / 300*/
+    --spacing-100:1rem;/* 16px  / 200*/
+    --spacing-75:.75rem;/* 12px  / 150*/
+    --spacing-50:.5rem;/* 8px / 100*/
+
+
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:var(--spacing-800) var(--spacing-300);
+    row-gap: var(--spacing-50); 
+    background-color: var(--stone-100);
+    /* background-color: red; */
+    /* height: 100vh; */
+    min-height: 1700px;
+    width: 100vw;
+}
+
+.recipe-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    /* background-color: blue; */
+    /* 736 x 1700 */
+    /* ? may need to make responsive with max and rem's or width 100% */
+    max-width: 736px;
+    width: 100%;
+    height: 1700px;
+    /* height: fill; */
+    /* flex: 1 1 auto; */
+    /* min-width: 0px; */
+    padding: var(--spacing-250);
+    row-gap: var(--spacing-250);
+    border-radius: var(--spacing-150);
+    
+}
+
+.recipe-image{
+    /* ? may need to make responsive */
+    max-width: 656px;
+    width: 100%;
+    height: 300px;
+    object-fit:cover ;
+    border-radius: var(--spacing-75);
+}
+
+.text-container{
+   display: flex;
+   flex-direction: column;
+   /* background-color: blueviolet;  */
+   max-width: 656px;
+   width: 100%;
+   height: 1280px;
+   row-gap: var(--spacing-200);
+}
+
+.title-container{
+    width: 100%;
+    height: 112px;
+    background-color: aqua;
+}
+
+.prep-container{
+    width: 100%;
+    height: 172px;
+    background-color: aquamarine;
+}
+
+.ingredients-container{
+    width: 100%;
+    height: 204px;
+    margin-bottom: var(--spacing-200);
+    background-color: blue;
+
+}
+
+.instructions-container{
+    width: 100%;
+    height: 332px;
+    margin-bottom: var(--spacing-200);
+    background-color: cadetblue;
+}
+
+.nutrition-container{
+    width: 100%;
+    height: 268px;
+    background-color:yellowgreen;
+}
+
+
