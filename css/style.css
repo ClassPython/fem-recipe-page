@@ -250,7 +250,33 @@ h2{
     width: 100%;
     height: 332px;
     margin-bottom: var(--spacing-200);
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
+}
+
+.instruction-list-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 608px;
+    width: 100%;
+    height: 280px;
+    list-style-position: outside;
+    padding-left: var(--spacing-150);
+    row-gap: var(--spacing-50);
+}
+
+.instruction-list-item b{
+    font-family: var(--font-outfit);
+    font-size:var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    letter-spacing: var(--h4-bold-letter-spacing);
+    line-height: var(--h4-bold-line-height);
+    color: var(--stone-600);
+}
+
+.instruction-list-item h4{
+    display: inline;
+    /* ?is margin needed */
+    margin: 0;
 }
 
 .nutrition-container{
