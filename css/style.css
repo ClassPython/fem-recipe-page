@@ -24,39 +24,39 @@
 
 
     /* Typography */
-    --font-title:'Young Serif', serif;
-    --font-content:'Outfit', sans-serif;
+    --font-young-serif:'Young Serif', serif;
+    --font-outfit:'Outfit', sans-serif;
     /* text preset I  - young serif regular  */
-    font-size:2.5rem; /* 40px */
-    font-weight: 400;
-    line-height: 100; /* 100 */
-    letter-spacing: 0;/* 0 */
+    --h1-size:2.5rem; /* 40px */
+    --h1-weight: 400;
+    --h1-line-height: 1; /* 100 */
+    --h1-letter-spacing: 0;/* 0 */
 
     /* text preset II  - young serif regular  */
-    font-size:1.75rem ;/* 28px */
-    font-weight:400 ;
-    line-height: 100;/* 100 */
-    letter-spacing: 0;/* 0 */
+    --h2--size:1.75rem ;/* 28px */
+    --h2-weight:400;
+    --h2-line-height: 1;/* 100 */
+    --h2-letter-spacing: 0;/* 0 */
 
     /* text preset III - outfit semibold */
-    font-size: 1.25rem;/* 20px */
-    font-weight: 600;
-    line-height: 100;/* 100 */
-    letter-spacing: 0;/* 0 */
+    --h3-size: 1.25rem;/* 20px */
+    --h3-weight: 600;
+    --h3-line-height: 1;/* 100 */
+    --h3-letter-spacing: 0;/* 0 */
 
 
     /* text preset IV  outfit regular */
-    font-size: 1rem;/* 16px */
-    font-weight: 400;
-    line-height: 150;/* 150 */
-    letter-spacing: 0;/* 0 */
+    --h4-size: 1rem;/* 16px */
+    --h4-weight: 400;
+    --h4-line-height: 1.5;/* 150 */
+    --h4-letter-spacing: 0;/* 0 */
 
 
     /* text preset - bold IV - outfit bold */
-    font-size: 1rem;/* 16px */
-    font-weight: 700;
-    line-height: 150;/* 150 */
-    letter-spacing: 0;/* 0 */
+    --h4-bold-size: 1rem;/* 16px */
+    --h4-bold-weight: 700;
+    --h4-bold-line-height: 1.5;/* 150 */
+    --h4--bold-letter-spacing: 0;/* 0 */
 
 
     /* Spacing - based on 16px*/
@@ -129,16 +129,69 @@ body{
 }
 
 .title-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-150);
     width: 100%;
     height: 112px;
     background-color: aqua;
 }
 
+
+/* ? maybe use clamp in font related */
+h1{ 
+    font-family: var(--font-young-serif);
+    font-size:var(--h1-size);
+    font-weight: var(--h1-weight);
+    letter-spacing: var(--h1-letter-spacing);
+    line-height: var(--h1-line-height);
+    color: var(--stone-900);
+}
+
+h4{
+    font-family: var(--font-outfit);
+    font-size:var(--h4-size);
+    font-weight: var(--h4-weight);
+    letter-spacing: var(--h4-letter-spacing);
+    line-height: var(--h4-line-height);
+    color: var(--stone-600);
+
+}
+
 .prep-container{
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-150);
+    row-gap: var(--spacing-100);
+    border-radius: var(--spacing-75);
+    max-width: 608px;
     width: 100%;
     height: 172px;
-    background-color: aquamarine;
+    background-color: var(--rose-50);
 }
+
+h3{
+    font-family: var(--font-outfit);
+    font-size:var(--h3-size);
+    font-weight: var(--h3-weight);
+    letter-spacing: var(--h3-letter-spacing);
+    line-height: var(--h3-line-height);
+    color: var(--rose-800);
+}
+
+.prep-bullet-container{
+    max-width: 608px;
+    width: 100%;
+    height: 88px;
+    list-style-position: outside;
+    padding-left: var(--spacing-150);
+}
+
+.prep-bullet::marker{
+   color: var(--rose-800);
+}
+
+
 
 .ingredients-container{
     width: 100%;
