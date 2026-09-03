@@ -196,6 +196,22 @@ h3{
     margin-bottom: var(--spacing-50);
 }
 
+/* .prep-bullet-container .prep-bullet strong::before{ */
+.prep-bullet::before{
+    /* font-family: var(--font-outfit); */
+    color: var(--rose-800);
+    font-size:var(--h4-size);
+    font-weight: var(--h4-weight);
+    /* letter-spacing: var(--h4-letter-spacing); */
+    line-height: var(--h4-line-height);
+    content: "\2022";
+    place-self: center;
+    padding-right: var(--spacing-100);
+    /* height: 4px; */
+    /* width: 4px; */
+    /* display: inline-block; */
+}
+
 .prep-bullet:last-of-type{
     margin-bottom: 0px;
 }
@@ -209,20 +225,6 @@ h3{
     color: var(--stone-600);
 }
 
-.prep-bullet-container .prep-bullet strong::before{
-    /* font-family: var(--font-outfit); */
-    /* font-size:var(--h4-size); */
-    /* font-weight: var(--h4-weight); */
-    /* letter-spacing: var(--h4-letter-spacing); */
-    /* line-height: var(--h4-line-height); */
-    color: var(--rose-800);
-    content: "\2022";
-    place-self: center;
-    padding-right: var(--spacing-100);
-    /* height: 4px; */
-    /* width: 4px; */
-    /* display: inline-block; */
-}
 
 /* .prep-bullet strong{
     font-family: var(--font-outfit);
@@ -288,20 +290,20 @@ h2{
     margin-bottom: var(--spacing-50);
 }
 
-.ingredient-bullet:last-of-type{
-    margin-bottom: 0px;
-}
-
-.ingredient-bullet h4::before{
+/* .ingredient-bullet h4::before{ */
+.ingredient-bullet::before{
     color: var(--brown-800);
     font-size: var(--h4-bold-size);
     font-weight: var(--h4-bold-weight);
+    /* line-height: var(--h4-bold-line-height); */
     content: "\2022";
     place-self: center;
-    padding-right: var(--spacing-100);
-
+    padding-right: var(--spacing-100);    
 }
 
+.ingredient-bullet:last-of-type{
+    margin-bottom: 0px;
+}
 
 /* ========================= */
 .instruction-container{
