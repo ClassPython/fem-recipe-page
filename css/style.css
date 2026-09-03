@@ -312,28 +312,71 @@ h2{
     /* height: 332px; */
     /* height: 332px + 32px; */ 
     /* ? heights may need to be min-heights */
-    height: 364px;
+    height: 364px; /* includes padding for border 332 + 32*/
     padding-bottom: var(--spacing-200);
     box-shadow: inset 0 -1px 0 0 var(--stone-150);
     /* background-color: cadetblue; */
 }
 
 .instruction-list-container{
-    display: flex;
-    flex-direction: column;
+    /* display: flex; */
+    /* flex-direction: column; */
     /* max-width: 656px - 24px; */
-    max-width: 656px;
-    width: 100%;
+    /* max-width: 656px; */
+    /* width: 100%; */
     /* ?Heights may need to be min heights */
-    height: 280px;
-    list-style-position: outside;
+    /* height: 280px; */
+    /* list-style-position: outside; */
     /* list-style-position: inside; */
-    padding-left: var(--spacing-150);
-    row-gap: var(--spacing-50);
+    /* padding-left: var(--spacing-150); */
+    /* row-gap: var(--spacing-50); */
+    list-style: none;
+    counter-reset: count;
+}
+
+.instruction-list-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-left: var(--spacing-50);
+    margin-bottom: var(--spacing-50);
+    counter-increment: count;
+}
+
+.instruction-list-item::before{
+    color: var(--brown-800);
+    font-size: var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    line-height: var(--h4-line-height);
+    /* place-self: center; */
+    padding-right: var(--spacing-100);
+    content: counter(count) ".";
+}
+
+.instruction-list-item:last-of-type{
+    margin-bottom: 0px;
 }
 
 /* .instruction-list-item h4 span{ */
-.instruction-list-item span{
+/* .instruction-list-item strong{
+    font-family: var(--font-outfit);
+    font-size:var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    letter-spacing: var(--h4-bold-letter-spacing);
+    line-height: var(--h4-bold-line-height);
+    color: var(--stone-600);
+} */
+
+/* .instruction-list-item strong::before{
+    color: var(--brown-800);
+    font-size: var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    place-self: center;
+    padding-right: var(--spacing-100);
+    content: counter(count) ".";
+
+} */
+
+.instruction-list-item b{
     font-family: var(--font-outfit);
     font-size:var(--h4-bold-size);
     font-weight: var(--h4-bold-weight);
@@ -342,9 +385,51 @@ h2{
     color: var(--stone-600);
 }
 
+/* .bold{
+    display: inline;
+} */
+
+/* .inline{
+    display: inline;
+} */
+
+/* .instruction-list-item b h4{
+    display: inline;
+} */
+
+
+/* .instruction-list-item b::before{
+    color: var(--brown-800);
+    font-size: var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    place-self: center;
+    padding-right: var(--spacing-100);
+    content: counter(count) ".";
+
+}  */
+ 
+
+/* .instruction-list-item span{
+    font-family: var(--font-outfit);
+    font-size:var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    letter-spacing: var(--h4-bold-letter-spacing);
+    line-height: var(--h4-bold-line-height);
+    color: var(--stone-600);
+} */
+
+/* .instruction-list-item span::before{
+    color: var(--brown-800);
+    font-size: var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    place-self: center;
+    padding-right: var(--spacing-100);
+    content: counter(count) ".";
+
+} */
+
 /* .instruction-list-item h4{ */
-.instruction-list-item{
-    /* display: inline; */
+/* .instruction-list-item{
     font-family: var(--font-outfit);
     font-size:var(--h4-size);
     font-weight: var(--h4-weight);
@@ -352,9 +437,7 @@ h2{
     line-height: var(--h4-line-height);
     color: var(--stone-600);
     padding-left: var(--spacing-100);
-    /* ?is margin needed */
-    margin: 0;
-}
+} */
 
 /* ================== */
 
@@ -394,14 +477,14 @@ b{
 } */
 
 
- .instruction-list-item::marker{
+ /* .instruction-list-item::marker{
     font-family: var(--font-outfit);
     font-size:var(--h4-bold-size);
     font-weight: var(--h4-bold-weight);
     letter-spacing: var(--h4-bold-letter-spacing);
     line-height: var(--h4-bold-line-height);
     color: var(--brown-800);
-} 
+}  */
 /* text-align: left; */
 
 
