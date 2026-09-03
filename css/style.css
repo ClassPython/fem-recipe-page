@@ -252,7 +252,8 @@ h3{
     row-gap: var(--spacing-150);
     width: 100%;
     /* ? does height need to be min height */
-    height: 236px;
+    height: 236px; /* Includes added height of padding for border*/
+    /* height: 204px; */
     padding-bottom: var(--spacing-200);
     box-shadow: inset 0 -1px 0 0 var(--stone-150); 
 }
@@ -263,20 +264,42 @@ h2{
     font-weight: var(--h2-weight);
     letter-spacing: var(--h2-letter-spacing);
     line-height: var(--h2-line-height);
-    color: var(--rose-800);
+    color: var(--brown-800);
 }
 
 
 .ingredient-bullet-container{
-    display: flex;
-    flex-direction: column;
-    max-width: 608px;
-    width: 100%;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* max-width: 608px; */
+    /* width: 100%; */
     /* ? Does height need to be min height */
-    height: 152px;
-    list-style-position: outside;
-    padding-left: var(--spacing-150);
-    row-gap: var(--spacing-50);
+    /* height: 152px; */
+    /* list-style-position: outside; */
+    /* padding-left: var(--spacing-150); */
+    /* row-gap: var(--spacing-50); */
+    list-style: none;
+}
+
+.ingredient-bullet{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-left: var(--spacing-50);
+    margin-bottom: var(--spacing-50);
+}
+
+.ingredient-bullet:last-of-type{
+    margin-bottom: 0px;
+}
+
+.ingredient-bullet h4::before{
+    color: var(--brown-800);
+    font-size: var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    content: "\2022";
+    place-self: center;
+    padding-right: var(--spacing-100);
+
 }
 
 
