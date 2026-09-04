@@ -56,7 +56,7 @@
     --h4-bold-size: 1rem;/* 16px */
     --h4-bold-weight: 700;
     --h4-bold-line-height: 1.5;/* 150 */
-    --h4--bold-letter-spacing: 0;/* 0 */
+    --h4-bold-letter-spacing: 0;/* 0 */
 
 
     /* Spacing - based on 16px*/
@@ -69,9 +69,7 @@
     --spacing-100:1rem;/* 16px  / 200*/
     --spacing-75:.75rem;/* 12px  / 150*/
     --spacing-50:.5rem;/* 8px / 100*/
-
 }
-
 
 body{
     display: flex;
@@ -90,28 +88,26 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--white);
-    /* 736 x 1700 */
-    /* ? may need to make responsive with max and rem's or width 100% */
     max-width: 736px;
     width: 100%;
     min-height: 1700px;
     padding: var(--spacing-250);
     row-gap: var(--spacing-250);
     border-radius: var(--spacing-150);
-    
+    background-color: var(--white);
 }
 
+
+/* ? may need to work on img responsive sizing. maybe use img container */
 .recipe-image{
-    /* ? may need to make responsive */
     max-width: 656px;
     width: 100%;
-    /*?does height need to be a min height. */
     min-height: 300px;
     object-fit:cover ;
     border-radius: var(--spacing-75);
 }
 
+/* ==== text container - for all sections below image ==== */
 .text-container{
    display: flex;
    flex-direction: column;
@@ -121,12 +117,13 @@ body{
    row-gap: var(--spacing-200);
 }
 
+/* ==== title container ==== */
 .title-container{
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-150);
-    width: 100%;
     min-height: 112px;
+    width: 100%;
+    row-gap: var(--spacing-150);
 }
 
 
@@ -149,17 +146,17 @@ h4{
     color: var(--stone-600);
 }
 
+
+/* ==== prep container */
 .prep-container{
     display: flex;
     flex-direction: column;
+    max-width: 656px;
+    width: 100%;
+    min-height: 172px;
     padding: var(--spacing-150);
     row-gap: var(--spacing-100);
     border-radius: var(--spacing-75);
-    /* max-width: 608px; */
-    max-width: 656px;
-    width: 100%;
-    /* ? does height need to be a min height */
-    min-height: 172px;
     background-color: var(--rose-50);
 }
 
@@ -184,13 +181,13 @@ h3{
 }
 
 .prep-bullet::before{
-    color: var(--rose-800);
     font-size:var(--h4-size);
     font-weight: var(--h4-weight);
     line-height: var(--h4-line-height);
+    padding-right: var(--spacing-100);
     content: "\2022";
     place-self: center;
-    padding-right: var(--spacing-100);
+    color: var(--rose-800);
 }
 
 .prep-bullet:last-of-type{
@@ -206,16 +203,15 @@ h3{
     color: var(--stone-600);
 }
 
-/* ingredients preset 4  */
+/* ======  ingredients container =====  */
 .ingredient-container{
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-150);
     width: 100%;
-    /* ? does height need to be min height */
     min-height: 236px; /* Includes added height of padding for border*/
     padding-bottom: var(--spacing-200);
-    box-shadow: inset 0 -1px 0 0 var(--stone-150); 
+    row-gap: var(--spacing-150);
+    box-shadow: inset 0 -1px 0 0 var(--stone-150); /* line at bottom of container */ 
 }
 
 h2{
@@ -227,9 +223,7 @@ h2{
     color: var(--brown-800);
 }
 
-
 .ingredient-bullet-container{
-    /* ? Does height need to be min height */
     list-style: none;
 }
 
@@ -241,32 +235,30 @@ h2{
 }
 
 .ingredient-bullet::before{
-    color: var(--brown-800);
     font-size: var(--h4-bold-size);
     font-weight: var(--h4-bold-weight);
+    padding-right: var(--spacing-100);    
     content: "\2022";
     place-self: center;
-    padding-right: var(--spacing-100);    
+    color: var(--brown-800);
 }
 
 .ingredient-bullet:last-of-type{
     margin-bottom: 0px;
 }
 
-/* ========================= */
+/* ==== instruction contianer  ==== */
 .instruction-container{
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-150);
     width: 100%;
-    /* ? heights may need to be min-heights */
     min-height: 364px; /* includes padding for border 332 + 32*/
     padding-bottom: var(--spacing-200);
-    box-shadow: inset 0 -1px 0 0 var(--stone-150);
+    row-gap: var(--spacing-150);
+    box-shadow: inset 0 -1px 0 0 var(--stone-150);  /* line at bottom of container */
 }
 
 .instruction-list-container{
-    /* ?Heights may need to be min heights */
     list-style: none;
     counter-reset: count;
 }
@@ -280,11 +272,12 @@ h2{
 }
 
 .instruction-list-item::before{
-    color: var(--brown-800);
+    font-family: var(--font-outfit);
     font-size: var(--h4-bold-size);
     font-weight: var(--h4-bold-weight);
     line-height: var(--h4-line-height);
     padding-right: var(--spacing-100);
+    color: var(--brown-800);
     content: counter(count) ".";
 }
 
@@ -302,12 +295,14 @@ h2{
     color: var(--stone-600);
 }
 
+/* ==== nutrition container ==== */
+
 .nutrition-container{
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-150);
     width: 100%;
     min-height: 268px;
+    row-gap: var(--spacing-150);
 }
 
 .nutrition-table{
@@ -316,33 +311,37 @@ h2{
     max-width: 656px;
     width: 100%;
     min-height: 168px;
-    box-sizing: border-box;
     align-content:space-between ;
 }
 
 .row{
       flex: 0 0 calc(50%);
-      max-width: 288px +32px;
       box-sizing: border-box;
-      /* height: 24px; */
       height: var(--spacing-150);
 }
 
-.left{
+/* columns on left side of rows */
+.col-left{
     padding-left: var(--spacing-200);
     padding-right: var(--spacing-50);
 }
 
-.col-2{
+/* columns on right side of rows */
+.col-right{
     padding-right: var(--spacing-200);
     padding-left:var(--spacing-50);
 }
 
-.col-2 b{
+.col-right b{
+    font-family: var(--font-outfit);
+    font-size:var(--h4-bold-size);
+    font-weight: var(--h4-bold-weight);
+    letter-spacing: var(--h4-bold-letter-spacing);
     color: var(--brown-800);
 }
 
 .border{
+    /* box shadow / border in between rows */
     max-width: 656px;
     width: 100%;
     font-size: 1px;
@@ -350,13 +349,6 @@ h2{
     box-shadow: inset 0px 1px 1px var(--stone-150) ;
 }
 
- .bold-text{
-    font-family: var(--font-outfit);
-    font-size:var(--h4-bold-size);
-    font-weight: var(--h4-bold-weight);
-    letter-spacing: var(--h4-bold-letter-spacing);
-    color: var(--rose-800);
- }
 
 
  
