@@ -4,7 +4,7 @@
 
 This challenge was to build and deploy Frontend Mentor's Recipe page challenge.  Frontend Mentor provided various assets including the images, figma file, and style guide.
 
-[Frontend Mentor Blog preview card challenge](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm)
+[Frontend Mentor Recipe page challenge](https://www.frontendmentor.io/challenges/recipe-page-KiTsR8QQKm)
 
 This challenge required knowledge of css, semantic HTML, and building a responsive website.
 
@@ -25,7 +25,14 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 - Flexbox
 - Mobile responsive design
 
+### Biggest Challenge
+
+- The biggest challenge was customizing the padding before and after each number   or bullet point to match the figma files.
+- Utilizing classes and display grid for each list item allowed for customizing margins, borders, colors and fonts.
+
 ### What I learned
+
+  
 
    - Resizing an image.
    - Creating ordered and unordered lists with custom padding and margins between each listed item.
