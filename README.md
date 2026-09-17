@@ -10,7 +10,7 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 
 ### Screenshot
 
-![Preview of solution for the Recipe page coding challenge](./images/screenshot.jpg)
+![Preview of solution for the Recipe page coding challenge](./images/screenshot-recipe-page.jpg)
 
 
 ### Links
@@ -25,14 +25,12 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 - Flexbox
 - Mobile responsive design
 
-### Biggest Challenge
+### Biggest challenge
 
 - The biggest challenge was customizing the padding before and after each number   or bullet point to match the figma files.
 - Utilizing classes and display grid for each list item allowed for customizing margins, borders, colors and fonts.
 
 ### What I learned
-
-  
 
    - Resizing an image.
    - Creating ordered and unordered lists with custom padding and margins between each listed item.
