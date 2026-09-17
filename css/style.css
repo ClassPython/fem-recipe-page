@@ -21,16 +21,11 @@
     --stone-600: hsl(30, 10%, 34%);
     --stone-900: hsl(24, 5%, 18%);
 
-    /* h1 goes to 36px */
-    /* h2 stays the same */
-    /* h3 stays at 20px */
-    /* h4 stays at 16px */
-
 
     /* Typography */
     --font-young-serif:'Young Serif', serif;
     --font-outfit:'Outfit', sans-serif;
-    /* --font-outfit:'Outfit'; */
+    
     /* text preset I  - young serif regular  */
     --h1-size:2.5rem; /* 40px */
     --h1-weight: 400;
@@ -105,8 +100,6 @@ body{
     background-color: var(--white);
 }
 
-
-/* ? may need to work on img responsive sizing. maybe use img container */
 .recipe-image{
     max-width: 656px;
     width: 100%;
@@ -134,15 +127,9 @@ body{
     row-gap: var(--spacing-150);
 }
 
-
-/* ? maybe use clamp in font related */
 h1{ 
     font-family: var(--font-young-serif);
-    /* font-size:var(--h1-size); */
-    /* font-size:var(--h1-size, --h1-size, --h1-size); */
-    /* font-size: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem); */
     font-size: clamp(var(--h1-mobile-size), 2.1786rem + 0.3571vw, var(--h1-size));
-
     font-weight: var(--h1-weight);
     letter-spacing: var(--h1-letter-spacing);
     line-height: var(--h1-line-height);
@@ -361,24 +348,17 @@ h2{
 }
 
 
-/* 768 */
-/* 616 */
-
 @media screen and (max-width:768px ) {
 
 body{
-    /* min-height:2100px; */
     height: 100%;
 }
 
 .recipe-container{
     max-width: 616px;
     width: 100%;
-    /* min-height: 1844px; */
     height: 100%;
-    /* height: 501px; */
     }
-
 } 
 
 @media screen and (max-width:600px ) {
@@ -389,8 +369,6 @@ body{
     height: 100%;
 }
 
-
-
 .recipe-container{
     max-width: 600px;
     border-radius: 0px;
@@ -399,7 +377,6 @@ body{
     height: 100%;
     padding: clamp(1rem, -4.1667rem + 17.7778vw, 2.5rem);
     }
-
 }
 
 @media screen and (max-width:375px ) {
@@ -418,12 +395,10 @@ body{
         padding-right: var(--spacing-200);
     }
 
-
     .recipe-image{
         border-radius: 0rem;
         min-height: 171px;
     }
-
 }
 
 
