@@ -21,6 +21,11 @@
     --stone-600: hsl(30, 10%, 34%);
     --stone-900: hsl(24, 5%, 18%);
 
+    /* h1 goes to 36px */
+    /* h2 stays the same */
+    /* h3 stays at 20px */
+    /* h4 stays at 16px */
+
 
     /* Typography */
     --font-young-serif:'Young Serif', serif;
@@ -31,6 +36,9 @@
     --h1-weight: 400;
     --h1-line-height: 1; /* 100 */
     --h1-letter-spacing: 0;/* 0 */
+
+    /* mobile text preset I  */
+    --h1-mobile-size:2.25rem;   /* 36px */
 
     /* text preset II  - young serif regular  */
     --h2-size:1.75rem ;/* 28px */
@@ -130,7 +138,11 @@ body{
 /* ? maybe use clamp in font related */
 h1{ 
     font-family: var(--font-young-serif);
-    font-size:var(--h1-size);
+    /* font-size:var(--h1-size); */
+    /* font-size:var(--h1-size, --h1-size, --h1-size); */
+    /* font-size: clamp(2.25rem, 2.1786rem + 0.3571vw, 2.5rem); */
+    font-size: clamp(var(--h1-mobile-size), 2.1786rem + 0.3571vw, var(--h1-size));
+
     font-weight: var(--h1-weight);
     letter-spacing: var(--h1-letter-spacing);
     line-height: var(--h1-line-height);
@@ -296,7 +308,6 @@ h2{
 }
 
 /* ==== nutrition container ==== */
-
 .nutrition-container{
     display: flex;
     flex-direction: column;
@@ -350,6 +361,70 @@ h2{
 }
 
 
+/* 768 */
+/* 616 */
 
- 
+@media screen and (max-width:768px ) {
+
+body{
+    /* min-height:2100px; */
+    height: 100%;
+}
+
+.recipe-container{
+    max-width: 616px;
+    width: 100%;
+    /* min-height: 1844px; */
+    height: 100%;
+    /* height: 501px; */
+    }
+
+} 
+
+@media screen and (max-width:600px ) {
+ body{
+    padding:0px;
+    row-gap: 0px; 
+    background-color: var(--white);
+    height: 100%;
+}
+
+
+
+.recipe-container{
+    max-width: 600px;
+    border-radius: 0px;
+    justify-content: start;
+    width: 100%;
+    height: 100%;
+    padding: clamp(1rem, -4.1667rem + 17.7778vw, 2.5rem);
+    }
+
+}
+
+@media screen and (max-width:375px ) {
+
+    .recipe-container{
+        padding: 0rem;
+    }
+
+    h1{
+        font-size: var(--h1-mobile-size);
+    }
+
+    .text-container{
+        padding-bottom: var(--spacing-250);
+        padding-left: var(--spacing-200);
+        padding-right: var(--spacing-200);
+    }
+
+
+    .recipe-image{
+        border-radius: 0rem;
+        min-height: 171px;
+    }
+
+}
+
+
 
