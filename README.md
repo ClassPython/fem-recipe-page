@@ -28,7 +28,7 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 ### What I learned
 
    - Resizing an image.
-   - Creating ordrered and unordered lists with custom padding and margins between each listed item.
+   - Creating ordered and unordered lists with custom padding and margins between each listed item.
    - Using custom colors, fonts, margins and padding for numbers and item description.
    - Creating a table with custom margins, padding, fonts and colors.
 
