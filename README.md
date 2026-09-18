@@ -10,7 +10,7 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 
 ### Screenshot
 
-![Preview of solution for the Recipe page coding challenge](./images/screenshot-recipe-page.jpg)
+![Preview of solution for the Recipe page coding challenge](./images/screenshot-final.jpg)
 
 
 ### Links
@@ -25,18 +25,15 @@ This challenge required knowledge of css, semantic HTML, and building a responsi
 - Flexbox
 - Mobile responsive design
 
-### Biggest challenge
-
-- The biggest challenge was customizing the padding before and after each number   or bullet point to match the figma files.
-- Utilizing classes and display grid for each list item allowed for customizing margins, borders, colors and fonts.
-
 ### What I learned
 
-   - Resizing an image.
-   - Creating ordered and unordered lists with custom padding and margins between each listed item.
-   - Using custom colors, fonts, margins and padding for numbers and item description.
-   - Creating a table with custom margins, padding, fonts and colors.
+- The biggest challenges were customizing the spacing for the ordered and unordered lists, as well as the table. 
 
+- For the ordered list, utilizing a combination of classes, display grid, display flex, and list-style:none on the container and list items, allowed customization of margins, borders, colors, and fonts. (See instruction container section in styles.css.)
+
+- For unordered list, utilizing before and last-of-type allowed customization of fonts, colors, paddings, and margins. (See ingredient container section in style.css)
+
+- For the table, utilizing border-collapse, padding, and border properties, allowed for customized spacing.
 
  
 
